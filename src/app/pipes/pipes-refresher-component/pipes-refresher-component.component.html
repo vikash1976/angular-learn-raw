@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offest-1 col-md-offset-2">
+      <ul class="list-group">
+        <li class="list-group-item"
+        *ngFor="let server of myServers"
+        [ngClass]="getClassPerServerStatus(server)">
+        <span class="badge">
+          {{server.status}}
+        </span>
+        <strong>{{server.name}}</strong> | {{server.instanceType | uppercase}} | 
+        {{server.startedOn | date:'medium'}} | 
+        {{server.cost | number:'.2-3' | currency:'USD':true}}
+        </li>
+      </ul>
+      <br/><br/>
+      <button class="btn btn-priamry" (click)="fetchPerson()">Fetch Person</button>
+      <div *ngIf="readyToLoadPerson">
+      <div *ngIf="person$ | async as person11; else loadingPerson">
+        Name: {{person11.name}}<br>
+        Twitter: {{person11.myheader}}
+      </div>
+      
+        
+      <!--Name: {{(person$ | async)?.name}}<br>
+      Twitter: {{(person$ | async)?.twitter}}
+      Website: {{(person$ | async)?.website}}-->
+           <ng-template #loadingPerson>
+        Loading Person ...
+      </ng-template>
+    This is person as non observable: {{person.name}}
+    </div>
+  </div>
+</div>

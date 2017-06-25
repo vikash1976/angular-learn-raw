@@ -1,0 +1,127 @@
+<!--<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <app-new-account (accountAdded)="onAccountAdded($event)"></app-new-account>
+      <app-new-account></app-new-account>
+      <hr>
+      
+      <app-account
+        *ngFor="let acc of accounts; let i = index"
+        [account]="acc"
+        [id]="i"
+        (statusChanged)="onStatusChanged($event)"></app-account>
+        <app-account
+        *ngFor="let acc of accounts; let i = index"
+        [account]="acc"
+        [id]="i"
+        ></app-account>
+        
+    </div>
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <button class="btn btn-danger" (click)="onAccountDeleted()">Delete Last Account</button>
+    </div>
+  </div>
+  <app-just-component>App Component says: </app-just-component>
+  <my-worklist></my-worklist>
+  <app-directives-refresher-component></app-directives-refresher-component>
+  <app-pipes-refresher-component></app-pipes-refresher-component>
+</div>-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <ul class="nav nav-tabs">
+        <li role="presentation"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="/">Home</a>
+        </li>
+        <li role="presentation"
+            routerLinkActive="active">
+          <a routerLink="servers">Servers</a>
+        </li>
+        <li role="presentation"
+            routerLinkActive="active">
+          <a [routerLink]="['users']">Users</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+  <h1>
+  Main App Component Says: 
+</h1>
+<h2>{{ title }}</h2>
+<h2>Here is my Object: {{myObject | json }}</h2>
+
+<h2 *ngIf="aNameList">Name List: </h2>
+<ul >
+  <h3><li *ngFor="let name of aNameList; let i=index" [ngClass]="{'odd': i % 2 == 0, 'even': i % 2 != 0}">{{name}}</li></h3>
+</ul>
+
+<h2>Conditional Templates:</h2>
+<div *ngIf="tempIdentifier === 1; then template1 else template2"></div>
+<ng-template #template1>I am template ONE</ng-template>
+
+<ng-template #template2>I am template TWO</ng-template>
+<app-task-list [taskList]="taskList" (taskStateChanged)="taskStateChanged($event)"><h2>List of Tasks</h2></app-task-list>
+<app-add-task (task-added)="onTaskAdded($event)"></app-add-task>
+<app-my-other-component></app-my-other-component>
+<button class="btn btn-primary" (click)="destroyTaskList()">Destory Tasks</button>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<h2 *ngIf="aNameList">Name List: </h2>
+<ul>
+  <h3><li *ngFor="let name of aNameList">{{name}}</li></h3>
+</ul>
+
+<h2>Conditional Templates:</h2>
+<div *ngIf="tempIdentifier === 1; then template1 else template2"></div>
+<ng-template #template1>I am template ONE</ng-template>
+
+<ng-template #template2>I am template TWO</ng-template> -->
+
+<!--<app-my-other-component></app-my-other-component>-->

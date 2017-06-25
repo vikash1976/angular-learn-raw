@@ -1,0 +1,10 @@
+<div class="container container-table">
+    <!--h2>Task List</h2-->   
+        <ng-content></ng-content>
+          <div class="row" *ngFor="let task of taskList">
+            <div class="col col-md-4">{{task.task}} </div>
+          <div class="col col-md-4"><button [ngClass]="{'btn-primary': task.status === 0, 'btn-danger': task.status === 1}"
+          [disabled]="task.status === 0" (click)="onTaskStateChange(task)">{{ getButtonText(task)}}</button></div></div>
+          
+   
+</div>

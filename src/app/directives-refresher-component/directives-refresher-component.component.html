@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+      <button class="btn btn-primary"
+      (click)="onlyOdd = !onlyOdd">Only Odd Please
+      </button>
+      <br><br>
+      <ul class="list-group">
+      <!--div *ngIf="onlyOdd">
+          <li class="list-group-item" *ngFor="let odd of oddNumbers"
+          [ngClass]="{odd: true}"
+          [ngStyle]="{backgroundColor: 'lightgreen'}">
+            {{odd}}
+          </li>
+        </div>-->
+  <!--<ng-template [ngIf]="onlyOdd">
+        <div>
+          <li class="list-group-item" *ngFor="let odd of oddNumbers"
+          [ngClass]="{odd: true}"
+          [ngStyle]="{backgroundColor: 'lightgreen'}">
+            {{odd}}
+          </li>
+        </div>
+  </ng-template>-->
+        <div *ngIf="!onlyOdd">
+          <li class="list-group-item" *ngFor="let even of evenNumbers"
+          [ngClass]="{even: true}"
+          [ngStyle]="{backgroundColor: 'skyblue'}">
+            {{even}}
+          </li>
+        </div>
+        <div *appNotIf="!onlyOdd">
+          <li class="list-group-item" *ngFor="let odd of oddNumbers"
+          [ngClass]="{odd: true}"
+          [ngStyle]="{backgroundColor: 'lightgreen'}">
+            {{odd}}
+          </li>
+        </div>
+      </ul>
+      <p appBasicHighlighter>I am styled with Basic appBasicHighlighter custom directive</p>
+      <p appBetterHighlighter>I am styled with appBetterHighlighter custom directive</p>
+      <p appEvenBetterHighlighter>I am styled with appEvenBetterHighlighter custom directive</p>
+      <p appEeevenBetterHighlighter [defaultColor]="'lightgray'"
+      [highlightColor]="'mediumpurple'">I am styled with appEeevenBetterHighlighter custom directive
+      </p>
+
+
+      <p appEeevenBetterHighlighter [defaultColor]="'gray'"
+      [highlightColor]="'purple'">I am styled with appEeevenBetterHighlighter-11212 custom directive
+      </p>
+      <div [ngSwitch]="manyValues">
+        
+        <p *ngSwitchCase="1">Current Value is: {{manyValues}}</p>
+        <p *ngSwitchCase="10">Current Value is: {{manyValues}}</p>
+        <p *ngSwitchCase="100">Current Value is: {{manyValues}}</p>
+        <p *ngSwitchDefault>Current Value is: {{manyValues}}</p>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="row">
+    <div class="col-xs-6">
+      <div appDropdown class="btn-group" [ngClass]="{open: true}">
+        <button type="button" class="btn btn-primary">Options Inside<span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Option One</a></li>
+          <li><a href="#">Option Two</a></li>
+          <li><a href="#">Option Three</a></li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>

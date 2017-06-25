@@ -1,0 +1,11 @@
+h1 {
+  color: red;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+.odd {
+  color: blue;
+}
+.even {
+  color: green;
+}
