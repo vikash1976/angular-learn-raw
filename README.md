@@ -7,7 +7,7 @@ It explores following topics:
  - Built-in and Custom Pipes
  - Services
  - Routing
- - Component and ist Lifecycle
+ - Component and its Lifecycle
 
 ## Development server
 ### Get Started
