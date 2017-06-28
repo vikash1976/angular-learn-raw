@@ -9,7 +9,9 @@ import { Subscription } from 'rxjs/Subscription';
 })
 export class UserComponent implements OnInit, OnDestroy {
   user: {id: number, name: string};
+  activity: string;
   paramsSubscription: Subscription;
+  queryParamsSubscription: Subscription;
 
   constructor(private route: ActivatedRoute) { }
 
@@ -25,10 +27,18 @@ export class UserComponent implements OnInit, OnDestroy {
           this.user.name = params['name'];
         }
       );
+      this.queryParamsSubscription = this.route.queryParams
+      .subscribe(
+        (params: Params) => {
+          this.activity = params['activity'];
+         
+        }
+      );
   }
 
   ngOnDestroy() {
     this.paramsSubscription.unsubscribe();
+    this.queryParamsSubscription.unsubscribe();
   }
 
 }

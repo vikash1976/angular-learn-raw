@@ -19,7 +19,7 @@ import { Task } from '../commons/tasks';
 })
 export class AddTaskComponent implements OnInit, OnChanges {
 
-//@Input() priority: number;
+@Input() priority: number;
 @Output('task-added')
 taskAdded :EventEmitter<Task> = new EventEmitter();
   constructor() {

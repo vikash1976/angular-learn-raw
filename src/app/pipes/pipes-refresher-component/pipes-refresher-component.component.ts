@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
-import 'rxjs/rx'
+import 'rxjs/Rx'
 
 @Component({
   selector: 'app-pipes-refresher-component',
@@ -11,6 +11,8 @@ export class PipesRefresherComponentComponent implements OnInit {
 person$;
 readyToLoadPerson = false;
 person;
+filterCriteria = '';
+filterOnField = '';
 myServers = [
   {
     instanceType: "medium",
@@ -59,11 +61,11 @@ getClassPerServerStatus(server) {
     this.readyToLoadPerson = true;
     this.person$ = this.http.get('/assets/person.json')
     .map(person => person.json())
-    .subscribe(data => {
+    /*.subscribe(data => {
       this.person = data
       console.log(data);
       console.log(this.person);
-    })
+    })*/
   }
 
 }
