@@ -1,8 +1,19 @@
 # MyApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.2.
+It explores following topics:
+ - Components
+ - Built-in and Custom Directives
+ - Built-in and Custom Pipes
+ - Services
+ - Routing
+ - Component and its Lifecycle
 
 ## Development server
+### Get Started
+Clone this repository using `git clone https://github.com/vikash1976/angular-learn-raw.git`
+
+Being in the cloned folder run `npm install`
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
